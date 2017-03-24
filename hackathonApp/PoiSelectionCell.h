@@ -1,5 +1,5 @@
 //
-//  ViewController.h
+//  PoiSelectionCell.h
 //  hackathonApp
 //
 //  Created by Dogan Altinbas on 24/03/2017.
@@ -8,8 +8,6 @@
 
 #import <UIKit/UIKit.h>
 
-@interface ViewController : UIViewController
-
+@interface PoiSelectionCell : UITableViewCell
 
 @end
-

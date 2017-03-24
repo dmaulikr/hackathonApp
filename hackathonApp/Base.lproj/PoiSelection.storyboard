@@ -1,0 +1,78 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="11201" systemVersion="16A323" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="11161"/>
+        <capability name="Aspect ratio constraints" minToolsVersion="5.1"/>
+        <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--Poi View Controller-->
+        <scene sceneID="tne-QT-ifu">
+            <objects>
+                <viewController id="BYZ-38-t0r" customClass="PoiViewController" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="y3c-jy-aDJ"/>
+                        <viewControllerLayoutGuide type="bottom" id="wfy-db-euE"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="Umh-Fj-80L"/>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="none" rowHeight="44" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="5O7-pl-HDz">
+                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" secondItem="5O7-pl-HDz" secondAttribute="height" multiplier="343:446" id="QYP-F0-6jF"/>
+                                </constraints>
+                                <color key="sectionIndexBackgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                                <prototypes>
+                                    <tableViewCell contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="poiSelectionCell" rowHeight="60" id="rST-oC-alp" userLabel="PoiSelectionCell" customClass="PoiSelectionCell">
+                                        <rect key="frame" x="0.0" y="28" width="343" height="60"/>
+                                        <autoresizingMask key="autoresizingMask"/>
+                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="rST-oC-alp" id="ijM-9O-Ycu">
+                                            <frame key="frameInset" width="343" height="60"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                            <subviews>
+                                                <label opaque="NO" userInteractionEnabled="NO" tag="1" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Şehir seç" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Mw4-6h-e71">
+                                                    <fontDescription key="fontDescription" type="italicSystem" pointSize="17"/>
+                                                    <color key="textColor" red="0.7803921568627451" green="0.7803921568627451" blue="0.80025945925245101" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                            </subviews>
+                                            <constraints>
+                                                <constraint firstItem="Mw4-6h-e71" firstAttribute="leading" secondItem="ijM-9O-Ycu" secondAttribute="leading" constant="10" id="C79-Zb-h8J"/>
+                                                <constraint firstAttribute="trailing" secondItem="Mw4-6h-e71" secondAttribute="trailing" constant="10" id="G56-KJ-aKY"/>
+                                                <constraint firstAttribute="bottom" secondItem="Mw4-6h-e71" secondAttribute="bottom" id="Uqk-4L-5GW"/>
+                                                <constraint firstItem="Mw4-6h-e71" firstAttribute="top" secondItem="ijM-9O-Ycu" secondAttribute="top" id="hIh-rS-tUh"/>
+                                            </constraints>
+                                        </tableViewCellContentView>
+                                    </tableViewCell>
+                                </prototypes>
+                                <connections>
+                                    <outlet property="dataSource" destination="BYZ-38-t0r" id="Nug-rB-mXB"/>
+                                    <outlet property="delegate" destination="BYZ-38-t0r" id="5sY-yh-3hE"/>
+                                </connections>
+                            </tableView>
+                        </subviews>
+                        <color key="backgroundColor" red="0.92549019607843142" green="0.39215686274509803" blue="0.29411764705882354" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstItem="5O7-pl-HDz" firstAttribute="top" secondItem="Umh-Fj-80L" secondAttribute="bottom" constant="36" id="6KS-Y4-R0a"/>
+                            <constraint firstItem="Umh-Fj-80L" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" id="7Nt-ib-ynK"/>
+                            <constraint firstItem="5O7-pl-HDz" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" id="DpU-x8-DVy"/>
+                            <constraint firstItem="wfy-db-euE" firstAttribute="top" secondItem="5O7-pl-HDz" secondAttribute="bottom" constant="20" id="MCV-1V-5Cu"/>
+                            <constraint firstItem="Umh-Fj-80L" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" constant="45" id="dGT-aK-IdR"/>
+                            <constraint firstItem="5O7-pl-HDz" firstAttribute="trailing" secondItem="8bC-Xf-vdC" secondAttribute="trailingMargin" id="oCr-rt-vWk"/>
+                            <constraint firstAttribute="trailing" secondItem="Umh-Fj-80L" secondAttribute="trailing" constant="45" id="oWD-TS-hLp"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="selectionTableView" destination="5O7-pl-HDz" id="mbO-E4-QvC"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="136.80000000000001" y="138.98050974512745"/>
+        </scene>
+    </scenes>
+</document>
