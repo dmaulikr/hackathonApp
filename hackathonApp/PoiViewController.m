@@ -17,7 +17,7 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
-    NSLog(@"First Commit");
+
     /*if (!UIAccessibilityIsReduceTransparencyEnabled()) {
         self.view.backgroundColor = [UIColor clearColor];
         
@@ -55,15 +55,11 @@
 
     if([selectedCell.reuseIdentifier isEqualToString:@"poiselectionCell"]){
     
-        NSLog(@"bastı");
+    
     
     }
     
-    else{
     
-        NSLog(@"NO");
-        
-    }
     
 }
 
